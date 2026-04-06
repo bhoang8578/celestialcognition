@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SCREEN 6: Game Board -->
+<!-- Reached from DifficultyFragment after pressing Start Game -->
+<!-- Actions: On all pairs matched OR timer hits 0 -> ResultsFragment -->
+<!-- TODO: Populate grid dynamically in GameFragment.kt based on difficulty -->
+<!--   Easy   = 4x2 grid (8 cards)  -->
+<!--   Medium = 4x3 grid (12 cards) -->
+<!--   Hard   = 4x4 grid (16 cards) -->
+<!-- TODO: Bind timerText to a CountDownTimer or ViewModel LiveData -->
+<!-- TODO: Use RecyclerView + GridLayoutManager instead of static GridLayout for real implementation -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D1B69"
+    tools:context=".GameFragment">
+
+    <!-- Timer display -->
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer: 0:15"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Timer: 0:15" />
+
+    <!-- Card grid placeholder -->
+    <!-- TODO: Replace with RecyclerView for dynamic card population -->
+    <GridLayout
+        android:id="@+id/cardGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerText">
+
+        <!-- Placeholder cards — replaced programmatically in GameFragment.kt -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0"
+            android:layout_height="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="#3D2080"
+            app:cardCornerRadius="12dp" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

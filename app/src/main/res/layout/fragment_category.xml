@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SCREEN 4: Category & High Scores -->
+<!-- Reached after successful login or account creation -->
+<!-- Actions: categoryButton(x3) -> DifficultyFragment (pass selected category via ViewModel/args) -->
+<!-- TODO: Load high scores from Firebase/database and populate highScoresList -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D1B69"
+    tools:context=".CategoryFragment">
+
+    <!-- High Scores section (top) -->
+    <TextView
+        android:id="@+id/highScoresTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Scores:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- High Scores card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/highScoresCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#3D2080"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highScoresTitle">
+
+        <!-- TODO: Replace with RecyclerView populated from database -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/highScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celestial Bodies:  0:13s"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                tools:text="Celestial Bodies:  0:13s" />
+
+            <TextView
+                android:id="@+id/highScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outer Space Exploration:  0:20s"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/highScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Space Cultural Mythology:  0:25s"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Select a category label -->
+    <TextView
+        android:id="@+id/selectCategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a category:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@id/highScoresCard"
+        app:layout_constraintTop_toBottomOf="@id/highScoresCard" />
+
+    <!-- Category buttons row -->
+    <LinearLayout
+        android:id="@+id/categoryButtonRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectCategoryTitle">
+
+        <!-- TODO: Set click listeners to navigate to DifficultyFragment with category arg -->
+        <Button
+            android:id="@+id/celestialBodiesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Celestial\nBodies"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5535A0"
+            android:textSize="11sp"
+            android:layout_marginEnd="6dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/outerSpaceButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Outer Space\nExploration"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5535A0"
+            android:textSize="11sp"
+            android:layout_marginEnd="6dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/mythologyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Space Cultural\nMythology"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5535A0"
+            android:textSize="11sp"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

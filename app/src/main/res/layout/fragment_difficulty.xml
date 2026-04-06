@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SCREEN 5: Select Difficulty -->
+<!-- Reached from CategoryFragment after selecting a category -->
+<!-- Actions: startGameButton -> GameFragment (pass difficulty + category via ViewModel/args) -->
+<!-- TODO: Receive category arg from CategoryFragment and display it above difficulty label -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D1B69"
+    tools:context=".DifficultyFragment">
+
+    <TextView
+        android:id="@+id/selectDifficultyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Difficulty"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/easyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.35"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/easyButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="Easy"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5535A0"
+        android:textSize="16sp"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@id/mediumButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectDifficultyTitle" />
+
+    <Button
+        android:id="@+id/mediumButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="Medium"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5535A0"
+        android:textSize="16sp"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@id/difficultButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/easyButton" />
+
+    <Button
+        android:id="@+id/difficultButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="32dp"
+        android:text="Difficult"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5535A0"
+        android:textSize="16sp"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@id/startGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mediumButton" />
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="Start Game"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7744CC"
+        android:textSize="16sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/difficultButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

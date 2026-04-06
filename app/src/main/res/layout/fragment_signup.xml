@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SCREEN 3: Sign Up -->
+<!-- Reached from LoginFragment via signUpToggle button -->
+<!-- Actions: createAccountButton -> CategoryFragment | loginToggle -> LoginFragment -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D1B69"
+    tools:context=".SignUpFragment">
+
+    <!-- Page title -->
+    <TextView
+        android:id="@+id/signUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celestial\nCognition"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:fontFamily="serif"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.1"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/signUpCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/signUpCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        app:cardBackgroundColor="#3D2080"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUpTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Name label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Name input -->
+            <EditText
+                android:id="@+id/nameET"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_edittext_bg"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9988CC"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Username label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Username input -->
+            <EditText
+                android:id="@+id/usernameET"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="text"
+                android:background="@drawable/rounded_edittext_bg"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9988CC"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Email label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Email input -->
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/rounded_edittext_bg"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9988CC"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Password label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Password input -->
+            <EditText
+                android:id="@+id/passwordET"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_edittext_bg"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9988CC"
+                android:layout_marginBottom="20dp" />
+
+            <!-- "Already have an account?" row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/haveAccountText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Already Have an Account?"
+                    android:textColor="#BBAAEE"
+                    android:textSize="12sp"
+                    android:fontFamily="serif"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/loginToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Log In"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#5535A0"
+                    android:textSize="12sp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+            <!-- Create Account button -->
+            <Button
+                android:id="@+id/createAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Create Account"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#5535A0"
+                android:textSize="16sp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
